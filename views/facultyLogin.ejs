@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Faculty Login</h1>
+    <% if (locals.message) { %> <%= message %> <% } %>
+    <form action="/faculty/login" method="post">
+      <label for="">Email:</label>
+      <input type="email" name="email" required />
+      <label for="">Password:</label>
+      <input type="password" name="password" required />
+      <button type="submit">Submit</button>
+    </form>
+    <h3><a href="/faculty/sendresetpassemail">Forget Password</a></h3>
+    <h3>New here? <a href="/faculty/register">Register</a></h3>
+  </body>
+</html>
